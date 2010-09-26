@@ -1,4 +1,4 @@
-var swirl = require("./lib/aws-api");
+var swirl = require("./lib/node-aws");
 
 ec2 = swirl.createEC2Client(yourAccessKeyId, yourSecretAccessKey);
 
