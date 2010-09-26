@@ -19,7 +19,11 @@ Some simple usage examples:
 
 Returns you something like:
     [...]
-    {"item":{"instanceId":"i-acb2d1db","imageId":"ami-03765c77","instanceState":    {"code":"80","name":"stopped"},"privateDnsName":{},"dnsName":{},"reason":"User initiated (2010-07-28 19:37:54 GMT)"
+    {"item":{
+      "instanceId":"i-acb2d1db","imageId":"ami-03765c77",
+      "instanceState": {"code":"80","name":"stopped"},
+      "privateDnsName":{},"dnsName":{},
+      "reason":"User initiated (2010-07-28 19:37:54 GMT)"
     [...] 
 
 or when using the Product Advertising API:
