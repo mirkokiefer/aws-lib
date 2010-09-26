@@ -1,0 +1,27 @@
+This is a simple library to communicate with the Amazon Web Services API.
+It includes specific clients for the EC2 and Product Advertising API but is designed to be easily extendable.
+All responses are parsed to JSON.
+
+Some simple usage examples:
+
+var swirl = require("./lib/node-aws");
+
+ec2 = swirl.createEC2Client(yourAccessKeyId, yourSecretAccessKey);
+
+ec2.call("DescribeInstances", {}, function(result) {
+  console.log(JSON.stringify(result));
+})
+
+Returns you something like:
+[É]
+{"item":{"instanceId":"i-acb2d1db","imageId":"ami-03765c77","instanceState":{"code":"80","name":"stopped"},"privateDnsName":{},"dnsName":{},"reason":"User initiated (2010-07-28 19:37:54 GMT)"
+[É] 
+
+or when using the Product Advertising API:
+prodAdv = swirl.createProdAdvClient(yourAccessKeyId, yourSecretAccessKey, yourAssociateTag);
+
+prodAdv.call("ItemSearch", {SearchIndex: "Books", Keywords: "Javascript"}, function(result) {
+  console.log(JSON.stringify(result));
+})
+
+Will return you a long list of Books...
