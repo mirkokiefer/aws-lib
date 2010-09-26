@@ -1,4 +1,5 @@
-This is a simple [Node.js](http://github.com/ry/node) library to communicate with the Amazon Web Services API.
+A simple [Node.js](http://github.com/ry/node) library to communicate with the Amazon Web Services API.
+=====
 
 It includes specific clients for the EC2 and Product Advertising API but is designed to be easily extendable.
 
