@@ -13,7 +13,7 @@
       "xml2js": "0.1.x",
       "sax": "0.1.x"
   },
-  "main": "lib/aws-lib",
+  "main": "lib/aws",
   "directories": {
     "lib": "lib",
     "example": "examples"
