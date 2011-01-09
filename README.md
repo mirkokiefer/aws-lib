@@ -9,7 +9,7 @@ All responses are parsed to JSON.
 
 Some simple usage examples:
 
-    var aws = require("./lib/node-aws");
+    var aws = require("aws-lib");
 
     ec2 = aws.createEC2Client(yourAccessKeyId, yourSecretAccessKey);
 
