@@ -1,0 +1,24 @@
+{
+  "name": "aws-lib",
+  "description": "Extendable Node.js library for the Amazon Web Services API",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mirkok/Node-AWS",
+  "repository": "https://github.com/mirkok/Node-AWS.git",
+  "author": "Mirko Kiefer <kiefer.mirko@googlemail.com> (http://mirkokiefer.com/blog/)",
+    "contributors": [
+    "Mirko Kiefer <kiefer.mirko@googlemail.com> (http://mirkokiefer.com/blog/)",
+    "Paul Bonser <pib@paulbonser.com> (http://probablyprogramming.com)"
+  ],
+  "dependencies": {
+      "xml2js": "0.1.x",
+      "sax": "0.1.x"
+  },
+  "main": "lib/aws",
+  "directories": {
+    "lib": "lib",
+    "example": "examples"
+  },
+  "engines": {
+    "node": "*"
+  }
+}
