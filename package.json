@@ -7,7 +7,8 @@
   "author": "Mirko Kiefer <kiefer.mirko@googlemail.com> (http://mirkokiefer.com/blog/)",
     "contributors": [
     "Mirko Kiefer <kiefer.mirko@googlemail.com> (http://mirkokiefer.com/blog/)",
-    "Paul Bonser <pib@paulbonser.com> (http://probablyprogramming.com)"
+    "Paul Bonser <pib@paulbonser.com> (http://probablyprogramming.com)",
+    "Richard Rodger <richard@ricebridge.com> (http://www.ricebridge.com/)
   ],
   "dependencies": {
       "xml2js": "0.1.x",
@@ -16,7 +17,8 @@
   "main": "lib/aws",
   "directories": {
     "lib": "lib",
-    "example": "examples"
+    "example": "examples",
+    "test": "test"
   },
   "engines": {
     "node": "*"

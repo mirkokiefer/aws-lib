@@ -5,6 +5,8 @@ A simple [Node.js](http://github.com/ry/node) library to communicate with the Am
 
 It includes specific clients for the EC2 and Product Advertising API but is designed to be easily extendable.
 
+Thanks to Richard Roger's contribution, the library now has support for SimpleDB, as well. Have a look at his tests for some examples.
+
 All responses are parsed to JSON.
 
 Some simple usage examples:
