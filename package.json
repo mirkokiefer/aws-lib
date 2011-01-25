@@ -1,8 +1,9 @@
 {
   "name": "aws-lib",
-  "description": "Extendable Node.js library for the Amazon Web Services API",
+  "description": "Extensible Node.js library for the Amazon Web Services API",
   "version": "0.0.2",
   "homepage": "https://github.com/mirkok/Node-AWS",
+  "keywords": ['amazon','aws', 'ec2', 'product advertising', 'simpledb','database','wrapper','api'],
   "repository": "https://github.com/mirkok/Node-AWS.git",
   "author": "Mirko Kiefer <kiefer.mirko@googlemail.com> (http://mirkokiefer.com/blog/)",
     "contributors": [
