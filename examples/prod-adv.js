@@ -1,4 +1,4 @@
-var aws = require("./lib/node-aws");
+var aws = require("../lib/aws");
 
 prodAdv = aws.createProdAdvClient(yourAccessKeyId, yourSecretAccessKey, yourAssociateTag);
 

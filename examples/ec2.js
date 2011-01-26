@@ -1,4 +1,4 @@
-var aws = require("./lib/node-aws");
+var aws = require("../lib/aws");
 
 ec2 = aws.createEC2Client(yourAccessKeyId, yourSecretAccessKey);
 
