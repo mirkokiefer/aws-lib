@@ -3,11 +3,12 @@ Node.js library for the Amazon Web Services
 
 A simple [Node.js](http://github.com/ry/node) library to communicate with the Amazon Web Services API.
 
-It includes clients for the following services: 
-    * EC2
-    * Product Advertising API
-    * SimpleDB
-    * SQS (Simple Queue Service)
+It includes clients for the following services:
+
+   * EC2
+   * Product Advertising API
+   * SimpleDB
+   * SQS (Simple Queue Service)
 
 Richard Rodger maintains a user-friendly [SimpleDB library](http://github.com/rjrodger/simpledb) which is based on aws-lib.
 
