@@ -1,13 +1,18 @@
-Node-AWS for EC2 and Product Advertising
+Node.js library for the Amazon Web Services
 =====
 
 A simple [Node.js](http://github.com/ry/node) library to communicate with the Amazon Web Services API.
 
-It includes specific clients for the EC2 and Product Advertising API but is designed to be easily extendable.
+It includes clients for the following services: 
+- EC2
+- Product Advertising API
+- SimpleDB
+- SQS (Simple Queue Service)
 
-Thanks to Richard Roger's contribution, the library now has support for SimpleDB, as well. Have a look at his tests for some examples.
+Richard Rodger maintains a user-friendly [SimpleDB library](http://github.com/rjrodger/simpledb) which is based on aws-lib.
 
-All responses are parsed to JSON.
+The library is designed to be easily extensible. If you want to add your own API client, have a look at ec2.js or simpledb.js and simply follow their example.
+
 
 Some simple usage examples:
 
@@ -19,7 +24,7 @@ Some simple usage examples:
       console.log(JSON.stringify(result));
     })
 
-Returns you something like:
+Returns you a JSON response which looks something like this:
     [...]
     {"item":{
       "instanceId":"i-acb2d1db","imageId":"ami-03765c77",
