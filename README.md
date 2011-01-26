@@ -9,6 +9,7 @@ It includes clients for the following services:
    * Product Advertising API
    * SimpleDB
    * SQS (Simple Queue Service)
+   * SNS (Simple Notification Service)
 
 Richard Rodger maintains a user-friendly [SimpleDB library](http://github.com/rjrodger/simpledb) which is based on aws-lib.
 
