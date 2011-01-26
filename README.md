@@ -12,8 +12,7 @@ It includes clients for the following services:
 
 Richard Rodger maintains a user-friendly [SimpleDB library](http://github.com/rjrodger/simpledb) which is based on aws-lib.
 
-The library is designed to be easily extensible. If you want to add your own API client, have a look at ec2.js or simpledb.js and simply follow their example.
-
+aws-lib is designed to be easily extensible. If you want to add your own API client, have a look at ec2.js or simpledb.js and simply follow their example.
 
 Some simple usage examples:
 
