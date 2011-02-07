@@ -4,7 +4,7 @@
   "version": "0.0.4",
   "homepage": "https://github.com/mirkok/aws-lib",
   "keywords": ["amazon","aws", "ec2", "product advertising", "simpledb", "Simple Queue Service", "SQS", "Simple Email Service", "SES", "database","wrapper","api"],
-  "repository": "https://github.com/mirkok/Node-AWS.git",
+  "repository": "git://github.com/mirkok/aws-lib.git",
   "author": "Mirko Kiefer <mail@mirkokiefer.com> (http://mirkokiefer.com)",
     "contributors": [
     "Mirko Kiefer <mail@mirkokiefer.com> (http://mirkokiefer.com)",
