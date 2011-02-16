@@ -23,6 +23,6 @@
     "test": "test"
   },
   "engines": {
-    "node": "*"
+    "node": "0.2.6"
   }
 }
