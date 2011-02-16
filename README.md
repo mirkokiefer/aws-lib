@@ -3,7 +3,7 @@ Node.js library for the Amazon Web Services
 
 A simple [Node.js](http://github.com/ry/node) library to communicate with the Amazon Web Services API.
 
-This version of aws-lib requires Node v0.4!
+This version of aws-lib requires Node v0.4! You can use v0.0.4 if you need to stick to Node v2.6.
 
 It includes clients for the following services:
 
