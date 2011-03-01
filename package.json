@@ -3,10 +3,10 @@
   "description": "Extensible Node.js library for the Amazon Web Services API",
   "version": "0.0.5",
   "homepage": "https://github.com/mirkok/aws-lib",
-  "keywords": ["amazon","aws", "ec2", "product advertising", "simpledb", "Simple Queue Service", "SQS", "Simple Email Service", "SES", "database","wrapper","api"],
+  "keywords": ["amazon","aws", "ec2", "product advertising", "simpledb", "Simple Queue Service", "SQS", "Simple Email Service", "SES"],
   "repository": "git://github.com/mirkok/aws-lib.git",
   "author": "Mirko Kiefer <mail@mirkokiefer.com> (http://mirkokiefer.com)",
-    "contributors": [
+  "contributors": [
     "Mirko Kiefer <mail@mirkokiefer.com> (http://mirkokiefer.com)",
     "Paul Bonser <pib@paulbonser.com> (http://probablyprogramming.com)",
     "Richard Rodger <richard@ricebridge.com> (http://www.ricebridge.com/)",
