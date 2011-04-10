@@ -13,3 +13,19 @@ ses.call("GetSendStatistics", {}, function(result) {
 ses.call("ListVerifiedEmailAddresses", {}, function(result) {
   console.log(JSON.stringify(result));
 });
+
+var recipient_address = 'test@example.com';
+var sender_address = 'test@example.com';
+var send_args = {
+	'Destination.ToAddresses.member.1': recipient_address,
+	'Message.Body.Text.Charset': 'UTF-8',
+	'Message.Body.Text.Data': 'Hello text body!',
+	'Message.Body.Html.Charset': 'UTF-8',
+	'Message.Body.Html.Data': '<b>Hello body!</b>',
+	'Message.Subject.Charset': 'UTF-8',
+	'Message.Subject.Data': 'Test subject',
+	'Source': sender_address
+};
+ses.call('SendEmail', send_args, function(result) {
+	console.log(result);
+});
