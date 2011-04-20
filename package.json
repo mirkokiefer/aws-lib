@@ -13,7 +13,7 @@
     "Ross Duggan <ross@boards.ie> (http://rossduggan.ie/)"
   ],
   "dependencies": {
-      "xml2js": "0.1.x",
+      "xml2js": "https://github.com/Leonidas-from-XIV/node-xml2js/tarball/master",
       "sax": "0.1.x"
   },
   "main": "lib/aws",
