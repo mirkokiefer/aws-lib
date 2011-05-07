@@ -10,7 +10,8 @@
     "Mirko Kiefer <mail@mirkokiefer.com> (http://mirkokiefer.com)",
     "Paul Bonser <pib@paulbonser.com> (http://probablyprogramming.com)",
     "Richard Rodger <richard@ricebridge.com> (http://www.ricebridge.com/)",
-    "Ross Duggan <ross@boards.ie> (http://rossduggan.ie/)"
+    "Ross Duggan <ross@boards.ie> (http://rossduggan.ie/)",
+    "Christoph Dorn <christoph@christophdorn.com> (http://www.christophdorn.com/)"
   ],
   "dependencies": {
       "xml2js": "0.1.x",
