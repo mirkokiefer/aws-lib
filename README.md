@@ -14,6 +14,7 @@ It includes clients for the following services:
    * SNS (Simple Notification Service)
    * SES (Simple Email Service)
    * ELB (Elastic Load Balancing Service) - added by [Bernhard Weißhuhn](https://github.com/bkw)
+   * CW (CloudWatch)
 
 Richard Rodger maintains a user-friendly [SimpleDB library](http://github.com/rjrodger/simpledb) which is based on aws-lib.
 
