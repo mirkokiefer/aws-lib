@@ -13,7 +13,7 @@ It includes clients for the following services:
    * SQS (Simple Queue Service)
    * SNS (Simple Notification Service)
    * SES (Simple Email Service)
-   * ELB (Elastic Load Balancing Service)
+   * ELB (Elastic Load Balancing Service) - added by [Bernhard Weißhuhn](https://github.com/bkw)
 
 Richard Rodger maintains a user-friendly [SimpleDB library](http://github.com/rjrodger/simpledb) which is based on aws-lib.
 
