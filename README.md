@@ -19,7 +19,9 @@ Richard Rodger maintains a user-friendly [SimpleDB library](http://github.com/rj
 
 aws-lib is designed to be easily extensible. If you want to add your own API client, have a look at ec2.js or simpledb.js and simply follow their example.
 
-Some simple usage examples:
+### Usage
+
+The following snippet implements an ec2 client and makes a call to DescribeInstances
 
     var aws = require("aws-lib");
 
@@ -29,7 +31,8 @@ Some simple usage examples:
       console.log(JSON.stringify(result));
     })
 
-Returns you a JSON response which looks something like this:
+Which returns a JSON response similar to:
+
     [...]
     {"item":{
       "instanceId":"i-acb2d1db","imageId":"ami-03765c77",
@@ -38,11 +41,18 @@ Returns you a JSON response which looks something like this:
       "reason":"User initiated (2010-07-28 19:37:54 GMT)"
     [...] 
 
-or when using the Product Advertising API:
+Another example, using Product Advertising API:
+
     prodAdv = aws.createProdAdvClient(yourAccessKeyId, yourSecretAccessKey, yourAssociateTag);
 
     prodAdv.call("ItemSearch", {SearchIndex: "Books", Keywords: "Javascript"}, function(result) {
       console.log(JSON.stringify(result));
     })
 
-Will return you a long list of Books...
+Will return a long list of books.
+
+Most clients, such as ec2, ses, simpledb, etc. accept an optional third parameter `options` which should be an object of options used to instantiate the client.  For example, the ec2 client could be instantiated with an options object like:
+
+    ec2 = aws.createEC2Client(yourAccessKeyId, yourSecretAccessKey, {version: '2010-08-31'});
+    
+which would instantiate the ec2 client, but using the 2010-08-31 API version.  See the library code for each service to learn about other possible options.
