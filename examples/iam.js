@@ -8,7 +8,7 @@ var params = {
   UserName: "TestUser"
 }
 
-iam.call("CreateUser", params, function(result) {
+iam.call("CreateUser", params, function(err, result) {
   if (result["Error"]) {
     console.log(JSON.stringify(result));
   }
@@ -16,7 +16,7 @@ iam.call("CreateUser", params, function(result) {
     params = {
       UserName: params["UserName"]
     }
-    iam.call("CreateAccessKey", params, function(result) {
+    iam.call("CreateAccessKey", params, function(err, result) {
       console.log(JSON.stringify(result));
     });
   }
