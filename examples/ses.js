@@ -2,15 +2,15 @@ var aws = require("../lib/aws");
 
 ses = aws.createSESClient(yourAccessKeyId, yourSecretAccessKey);
 
-ses.call("GetSendQuota", {}, function(result) {
+ses.call("GetSendQuota", {}, function(err, result) {
   console.log(JSON.stringify(result));
 });
 
-ses.call("GetSendStatistics", {}, function(result) {
+ses.call("GetSendStatistics", {}, function(err, result) {
   console.log(JSON.stringify(result));
 });
 
-ses.call("ListVerifiedEmailAddresses", {}, function(result) {
+ses.call("ListVerifiedEmailAddresses", {}, function(err, result) {
   console.log(JSON.stringify(result));
 });
 
@@ -26,6 +26,6 @@ var send_args = {
 	'Message.Subject.Data': 'Test subject',
 	'Source': sender_address
 };
-ses.call('SendEmail', send_args, function(result) {
+ses.call('SendEmail', send_args, function(err, result) {
 	console.log(result);
 });
