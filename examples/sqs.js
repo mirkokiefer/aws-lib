@@ -8,7 +8,7 @@ var awsPrivateKey = "";
 
 sqs = aws.createSQSClient( awsKey, awsPrivateKey);
 
-sqs.call ( "ListQueues", {}, function (result) { 
+sqs.call ( "ListQueues", {}, function (err, result) { 
     console.log("ListQueues result: " + JSON.stringify(result)); 
 });
 
