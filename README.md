@@ -3,7 +3,7 @@ Node.js library for the Amazon Web Services
 
 A simple [Node.js](http://github.com/ry/node) library to communicate with the Amazon Web Services API.
 
-This version of aws-lib requires Node v0.4! You can use v0.0.4 if you need to stick to Node v2.6.
+This version of aws-lib has been tested on Node v0.6.11.
 
 It includes clients for the following services:
 
@@ -15,6 +15,7 @@ It includes clients for the following services:
    * SES (Simple Email Service)
    * ELB (Elastic Load Balancing Service) - added by [Bernhard Weißhuhn](https://github.com/bkw)
    * CW (CloudWatch)
+   * IAM (Identity and Access Management)
 
 Richard Rodger maintains a user-friendly [SimpleDB library](http://github.com/rjrodger/simpledb) which is based on aws-lib.
 
@@ -28,7 +29,7 @@ The following snippet implements an ec2 client and makes a call to DescribeInsta
 
     ec2 = aws.createEC2Client(yourAccessKeyId, yourSecretAccessKey);
 
-    ec2.call("DescribeInstances", {}, function(result) {
+    ec2.call("DescribeInstances", {}, function(err, result) {
       console.log(JSON.stringify(result));
     })
 
@@ -46,7 +47,7 @@ Another example, using Product Advertising API:
 
     prodAdv = aws.createProdAdvClient(yourAccessKeyId, yourSecretAccessKey, yourAssociateTag);
 
-    prodAdv.call("ItemSearch", {SearchIndex: "Books", Keywords: "Javascript"}, function(result) {
+    prodAdv.call("ItemSearch", {SearchIndex: "Books", Keywords: "Javascript"}, function(err, result) {
       console.log(JSON.stringify(result));
     })
 
