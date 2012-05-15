@@ -16,6 +16,7 @@ It includes clients for the following services:
    * ELB (Elastic Load Balancing Service) - added by [Bernhard Weißhuhn](https://github.com/bkw)
    * CW (CloudWatch)
    * IAM (Identity and Access Management)
+   * AS (Auto Scaling) 
 
 Richard Rodger maintains a user-friendly [SimpleDB library](http://github.com/rjrodger/simpledb) which is based on aws-lib.
 
