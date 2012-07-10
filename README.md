@@ -7,15 +7,15 @@ This version of aws-lib has been tested on Node v0.6.11.
 
 It includes clients for the following services:
 
-   * EC2
-   * Product Advertising API
-   * SimpleDB
-   * SQS (Simple Queue Service)
+   * [EC2](https://github.com/livelycode/aws-lib/blob/master/examples/ec2.js)
+   * [Product Advertising API](https://github.com/livelycode/aws-lib/blob/master/examples/prod-adv.js)
+   * [SimpleDB](https://github.com/livelycode/aws-lib/blob/master/test/simpledb.js)
+   * [SQS (Simple Queue Service)](https://github.com/livelycode/aws-lib/blob/master/examples/sqs.js)
    * SNS (Simple Notification Service)
-   * SES (Simple Email Service)
-   * ELB (Elastic Load Balancing Service)
-   * CW (CloudWatch)
-   * IAM (Identity and Access Management)
+   * [SES (Simple Email Service)](https://github.com/livelycode/aws-lib/blob/master/examples/ses.js)
+   * [ELB (Elastic Load Balancing Service)](https://github.com/livelycode/aws-lib/blob/master/examples/elb.js)
+   * [CW (CloudWatch)](https://github.com/livelycode/aws-lib/blob/master/examples/cw.js)
+   * [IAM (Identity and Access Management)](https://github.com/livelycode/aws-lib/blob/master/examples/iam.js)
 
 Richard Rodger maintains a user-friendly [SimpleDB library](http://github.com/rjrodger/simpledb) which is based on aws-lib.
 
