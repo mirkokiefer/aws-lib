@@ -57,6 +57,8 @@ Most clients, such as ec2, ses, simpledb, etc. accept an optional third paramete
     
 which would instantiate the ec2 client, but using the 2010-08-31 API version.  See the library code for each service to learn about other possible options.
 
+For more examples have a look at [/examples](https://github.com/livelycode/aws-lib/tree/master/examples) and [/test](https://github.com/livelycode/aws-lib/tree/master/test).
+
 ## Tests
 In order to run the tests you need to copy "test/credentials_template.js" to "test/credentials.js" and add your access key and secret.  
 credentials.js is part of .gitignore so you don't have to worry about accidentially commiting your secret.
@@ -68,7 +70,7 @@ To run the tests execute:
 
 ## Contributing
 aws-lib is designed to be easily extensible.  
-If you want to add support for a service, have a look at an existing client and simply follow the pattern.  
+If you want to add support for a service, have a look at an [existing client](https://github.com/livelycode/aws-lib/blob/master/lib/ec2.js) and simply follow the pattern.  
 When submitting a pull request please add a test for at least one API call.
 
 Many thanks to the following people who have contributed so far (ordered by number of commits):
