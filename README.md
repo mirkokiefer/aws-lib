@@ -13,15 +13,13 @@ It includes clients for the following services:
    * SQS (Simple Queue Service)
    * SNS (Simple Notification Service)
    * SES (Simple Email Service)
-   * ELB (Elastic Load Balancing Service) - added by [Bernhard Weißhuhn](https://github.com/bkw)
+   * ELB (Elastic Load Balancing Service)
    * CW (CloudWatch)
    * IAM (Identity and Access Management)
 
 Richard Rodger maintains a user-friendly [SimpleDB library](http://github.com/rjrodger/simpledb) which is based on aws-lib.
 
-aws-lib is designed to be easily extensible. If you want to add your own API client, have a look at ec2.js or simpledb.js and simply follow their example.
-
-### Usage
+## Usage
 
 The following snippet implements an ec2 client and makes a call to DescribeInstances
 
@@ -58,3 +56,40 @@ Most clients, such as ec2, ses, simpledb, etc. accept an optional third paramete
     ec2 = aws.createEC2Client(yourAccessKeyId, yourSecretAccessKey, {version: '2010-08-31'});
     
 which would instantiate the ec2 client, but using the 2010-08-31 API version.  See the library code for each service to learn about other possible options.
+
+## Tests
+In order to run the tests you need to copy "test/credentials_template.js" to "test/credentials.js" and add your access key and secret.  
+credentials.js is part of .gitignore so you don't have to worry about accidentially commiting your secret.
+
+To run the tests execute:
+
+    npm test
+
+
+## Contributing
+aws-lib is designed to be easily extensible.  
+If you want to add support for a service, have a look at an existing client and simply follow the pattern.  
+When submitting a pull request please add a test for at least one API call.
+
+Many thanks to the following people who have contributed so far (ordered by number of commits):
+
+```
+Mirko Kiefer
+Paul Bonser
+Bernhard K. Weisshuhn
+Kent
+David Valentiate
+Richard Rodger
+Sean Coates
+john
+Jonathan Leibiusky
+Matt Duncan
+Cameron Gray
+Bryon
+nagoodman
+Blake Matheny
+Van Nguyen
+Ian Ward
+Johannes Auer
+Chris Castle
+```
