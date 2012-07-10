@@ -1,7 +1,7 @@
 
 assert = require('assert');
 aws = require('../lib/aws');
-credentials = require('./test-credentials');
+credentials = require('./credentials');
 
 ec2 = aws.createEC2Client(credentials.accessKeyId, credentials.secretAccessKey);
 

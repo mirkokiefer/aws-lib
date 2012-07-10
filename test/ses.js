@@ -1,7 +1,7 @@
 
 assert = require('assert');
 aws = require('../lib/aws');
-credentials = require('./test-credentials');
+credentials = require('./credentials');
 
 ses = aws.createSESClient(credentials.accessKeyId, credentials.secretAccessKey);
 

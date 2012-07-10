@@ -1,7 +1,7 @@
 
 assert = require('assert');
 aws = require('../lib/aws');
-credentials = require('./test-credentials');
+credentials = require('./credentials');
 
 sqs = aws.createSQSClient(credentials.accessKeyId, credentials.secretAccessKey);
 

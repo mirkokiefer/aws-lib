@@ -1,7 +1,7 @@
 
 assert = require('assert');
 aws = require('../lib/aws');
-credentials = require('./test-credentials');
+credentials = require('./credentials');
 
 prodAdv = aws.createProdAdvClient(credentials.accessKeyId, credentials.secretAccessKey, "");
 

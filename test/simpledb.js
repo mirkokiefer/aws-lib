@@ -1,7 +1,7 @@
 
 assert = require('assert');
 aws = require('../lib/aws');
-credentials = require('./test-credentials');
+credentials = require('./credentials');
 
 sdb = aws.createSimpleDBClient(credentials.accessKeyId, credentials.secretAccessKey, {secure:false});
 

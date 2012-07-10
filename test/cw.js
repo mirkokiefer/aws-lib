@@ -1,7 +1,7 @@
 
 assert = require('assert');
 aws = require('../lib/aws');
-credentials = require('./test-credentials');
+credentials = require('./credentials');
 
 cw = aws.createCWClient(credentials.accessKeyId, credentials.secretAccessKey);
 
