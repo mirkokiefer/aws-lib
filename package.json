@@ -1,7 +1,7 @@
 {
   "name": "aws-lib",
   "description": "Extensible Node.js library for the Amazon Web Services API",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "homepage": "http://github.com/livelycode/aws-lib",
   "keywords": ["amazon","aws", "ec2", "product advertising", "simpledb", "Simple Queue Service", "SQS", "Simple Email Service", "SES"],
   "repository": "git://github.com/livelycode/aws-lib.git",
@@ -15,6 +15,12 @@
   "dependencies": {
       "xml2js": "0.1.x",
       "sax": "0.1.x"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
   },
   "main": "lib/aws",
   "directories": {
