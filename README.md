@@ -17,6 +17,7 @@ It includes clients for the following services:
    * [CW (CloudWatch)](https://github.com/livelycode/aws-lib/blob/master/examples/cw.js)
    * [IAM (Identity and Access Management)](https://github.com/livelycode/aws-lib/blob/master/examples/iam.js)
    * [CFN (CloudFormation)](https://github.com/livelycode/aws-lib/blob/master/test/cfn.js)
+   * STS (Security Token Service)
 
 Richard Rodger maintains a user-friendly [SimpleDB library](http://github.com/rjrodger/simpledb) which is based on aws-lib.
 
