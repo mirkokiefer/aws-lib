@@ -3,7 +3,7 @@ assert = require('assert');
 aws = require('../lib/aws');
 credentials = require('./credentials');
 
-elb = aws.createELBClient(credentials.accessKeyId, credentials.secretAccessKey);
+var elb = aws.createELBClient(credentials.accessKeyId, credentials.secretAccessKey);
 
 describe('elb', function() {
   describe('DescribeLoadBalancers', function() {
