@@ -25,7 +25,7 @@ var outbound = {
 };
 
 sqs = aws.createSQSClient(awsKey, awsPrivateKey, options);
-sqs.call ( "SendMessage", outbound, function (result ) {
+sqs.call ( "SendMessage", outbound, function (err, result ) {
     console.log("result: " + JSON.stringify(result)); 
 });
     
