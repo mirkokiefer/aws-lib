@@ -62,6 +62,24 @@ which would instantiate the ec2 client, but using the 2010-08-31 API version.  S
 
 For more examples have a look at [/examples](https://github.com/livelycode/aws-lib/tree/master/examples) and [/test](https://github.com/livelycode/aws-lib/tree/master/test).
 
+## Credentials, metadata API, and IAM Roles
+
+If you use aws-lib on EC2s it is necessary to distribute your AWS API access key and secret id to each EC2 in order to authenticate requests.  [IAM Roles](http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/UsingIAM.html#UsingIAMrolesWithAmazonEC2Instances) removes the need to manually distribute your AWS API access key and secret id to EC2s.  Create an IAM role(s) and assign to your EC2s (CloudFormation supports IAM Roles). An access key, secret id, and token will then be provided on the EC2 metadata API.  You can then use aws-lib without passing in any credentials to API clients.  For example:
+
+    var aws = require("aws-lib");
+    ec2 = aws.createEC2Client(); // Notice no access key nor secret id passed in to client
+    ec2.call("DescribeInstances", {}, function(err, result) {
+      console.log(JSON.stringify(result));
+    });
+
+If no access key or secret id are passed in to the client, aws-lib will attempt to look up the credentials from the EC2 metadata API.  The metadata API can also be used like other aws-lib API clients, such as:
+
+    var aws = require("aws-lib");
+    var md = aws.createMetaDataClient();
+    md.call({endpoint: 'instance-id'}, function(err, res) {
+      console.log(res); // outputs this EC2's instance-id.
+    });
+
 ## Tests
 In order to run the tests you need to copy "test/credentials_template.js" to "test/credentials.js" and add your access key and secret.  
 credentials.js is part of .gitignore so you don't have to worry about accidentially commiting your secret.

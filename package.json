@@ -18,10 +18,11 @@
       "sax": "0.1.x"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "nock": "0.14.x"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha -t 60000"
   },
   "main": "lib/aws",
   "directories": {
