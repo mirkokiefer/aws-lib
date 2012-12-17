@@ -72,6 +72,8 @@ To run the tests execute:
 
 
 ## Contributing
+*At livelycode we currently can't invest enough time to merge and test all new contributions. So our friends at [mapbox](https://github.com/mapbox) offered to jump in and help maintain this library. We have granted [Ian Ward](https://github.com/ianshward) commit access to this repository.*
+
 aws-lib is designed to be easily extensible.  
 If you want to add support for a service, have a look at an [existing client](https://github.com/livelycode/aws-lib/blob/master/lib/ec2.js) and simply follow the pattern.  
 When submitting a pull request please add a test for at least one API call.
