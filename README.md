@@ -26,58 +26,70 @@ Richard Rodger maintains a user-friendly [SimpleDB library](http://github.com/rj
 
 The following snippet implements an ec2 client and makes a call to DescribeInstances
 
-    var aws = require("aws-lib");
+``` js
+var aws = require("aws-lib");
 
-    ec2 = aws.createEC2Client(yourAccessKeyId, yourSecretAccessKey);
+ec2 = aws.createEC2Client(yourAccessKeyId, yourSecretAccessKey);
 
-    ec2.call("DescribeInstances", {}, function(err, result) {
-      console.log(result);
-    })
+ec2.call("DescribeInstances", {}, function(err, result) {
+  console.log(result);
+})
+```
 
 Which returns a JSON response similar to:
 
-    [...]
-    {"item":{
-      "instanceId":"i-acb2d1db","imageId":"ami-03765c77",
-      "instanceState": {"code":"80","name":"stopped"},
-      "privateDnsName":{},"dnsName":{},
-      "reason":"User initiated (2010-07-28 19:37:54 GMT)"
-    [...] 
+``` js
+[...]
+{"item":{
+  "instanceId":"i-acb2d1db","imageId":"ami-03765c77",
+  "instanceState": {"code":"80","name":"stopped"},
+  "privateDnsName":{},"dnsName":{},
+  "reason":"User initiated (2010-07-28 19:37:54 GMT)"
+[...]
+```
 
 Another example, using Product Advertising API:
 
-    var prodAdv = aws.createProdAdvClient(yourAccessKeyId, yourSecretAccessKey, yourAssociateTag);
-    var options = {SearchIndex: "Books", Keywords: "Javascript"}
-    prodAdv.call("ItemSearch", options, function(err, result) {
-      console.log(result);
-    })
+``` js
+var prodAdv = aws.createProdAdvClient(yourAccessKeyId, yourSecretAccessKey, yourAssociateTag);
+
+var options = {SearchIndex: "Books", Keywords: "Javascript"}
+
+prodAdv.call("ItemSearch", options, function(err, result) {
+  console.log(result);
+})
+```
 
 Will return a long list of books.
 
 Most clients, such as ec2, ses, simpledb, etc. accept an optional third parameter `options` which should be an object of options used to instantiate the client.  For example, the ec2 client could be instantiated with an options object like:
 
-    ec2 = aws.createEC2Client(yourAccessKeyId, yourSecretAccessKey, {version: '2010-08-31'});
+``` js
+ec2 = aws.createEC2Client(yourAccessKeyId, yourSecretAccessKey, {version: '2010-08-31'});
+```
     
-which would instantiate the ec2 client, but using the 2010-08-31 API version.  See the library code for each service to learn about other possible options.
+which would instantiate the ec2 client, but using the 2010-08-31 API version.  
 
-You can also specify additional parameters when making calls to the API. The example below shows how you can filter results using one of the list of filters documented in the AWS API docs.
+The example below shows how you can filter results using one of the list of filters documented in the AWS API docs. See the library code for each service to learn about other possible options.
 
-    var options = {
-      host: "ec2.eu-west-1.amazonaws.com", // use a different region to the default
-      version: "2010-08-31"
-    };
+``` js
+var options = {
+  host: "ec2.eu-west-1.amazonaws.com", // use a different region to the default
+  version: "2010-08-31"
+};
 
-    ec2 = aws.createEC2Client(yourAccessKeyId, yourSecretAccessKey, options);
-    
-    // create a filter for instances with `mytagname = mytagvalue`
-    var params = {
-      "Filter.1.Name": "tag:mytagname",
-      "Filter.1.Value.1": "mytagvalue"
-    }
+ec2 = aws.createEC2Client(yourAccessKeyId, yourSecretAccessKey, options);
 
-    ec2.call("DescribeInstances", params, function(err, result) {
-      console.log(result);
-    })
+// create a filter for instances with `mytagname = mytagvalue`
+var params = {
+  "Filter.1.Name": "tag:mytagname",
+  "Filter.1.Value.1": "mytagvalue"
+}
+
+ec2.call("DescribeInstances", params, function(err, result) {
+  console.log(result);
+})
+```
 
 For more examples have a look at [/examples](https://github.com/livelycode/aws-lib/tree/master/examples) and [/test](https://github.com/livelycode/aws-lib/tree/master/test).
 
@@ -85,19 +97,23 @@ For more examples have a look at [/examples](https://github.com/livelycode/aws-l
 
 If you use aws-lib on EC2s it is necessary to distribute your AWS API access key and secret id to each EC2 in order to authenticate requests.  [IAM Roles](http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/UsingIAM.html#UsingIAMrolesWithAmazonEC2Instances) removes the need to manually distribute your AWS API access key and secret id to EC2s.  Create an IAM role(s) and assign to your EC2s (CloudFormation supports IAM Roles). An access key, secret id, and token will then be provided on the EC2 metadata API.  You can then use aws-lib without passing in any credentials to API clients.  For example:
 
-    var aws = require("aws-lib");
-    ec2 = aws.createEC2Client(); // Notice no access key nor secret id passed in to client
-    ec2.call("DescribeInstances", {}, function(err, result) {
-      console.log(JSON.stringify(result));
-    });
+``` js
+var aws = require("aws-lib");
+ec2 = aws.createEC2Client(); // Notice no access key nor secret id passed in to client
+ec2.call("DescribeInstances", {}, function(err, result) {
+  console.log(JSON.stringify(result));
+});
+```
 
 If no access key or secret id are passed in to the client, aws-lib will attempt to look up the credentials from the EC2 metadata API.  The metadata API can also be used like other aws-lib API clients, such as:
 
-    var aws = require("aws-lib");
-    var md = aws.createMetaDataClient();
-    md.call({endpoint: "instance-id"}, function(err, res) {
-      console.log(res); // outputs this EC2's instance-id.
-    });
+``` js
+var aws = require("aws-lib");
+var md = aws.createMetaDataClient();
+md.call({endpoint: "instance-id"}, function(err, res) {
+  console.log(res); // outputs this EC2's instance-id.
+});
+```
 
 ## Tests
 In order to run the tests you need to copy "test/credentials_template.js" to "test/credentials.js" and add your access key and secret.  
