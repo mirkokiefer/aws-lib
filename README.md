@@ -60,23 +60,24 @@ Most clients, such as ec2, ses, simpledb, etc. accept an optional third paramete
     
 which would instantiate the ec2 client, but using the 2010-08-31 API version.  See the library code for each service to learn about other possible options.
 
-You can also specify an additional parameter when making calls to the API. The example below shows how you can filter results using one of the list of filters documented in the AWS API docs.
+You can also specify additional parameters when making calls to the API. The example below shows how you can filter results using one of the list of filters documented in the AWS API docs.
 
-      var options = {};
-      options['host'] = 'ec2.eu-west-1.amazonaws.com'; // use a different region to the default
-      options['version'] = '2010-08-31'; // set version - required for the parameter `Filter` to work below
+    var options = {
+      'host': 'ec2.eu-west-1.amazonaws.com', // use a different region to the default
+      'version': '2010-08-31'
+    };
 
-      ec2 = aws.createEC2Client(yourAccessKeyId, yourSecretAccessKey, options);
-      
-      // create a filter for instances with `mytagname = mytagvalue`
-      var params = {};
-      params['Filter.1.Name'] = 'tag:mytagname';
-      params['Filter.1.Value.1'] = 'mytagvalue';
+    ec2 = aws.createEC2Client(yourAccessKeyId, yourSecretAccessKey, options);
+    
+    // create a filter for instances with `mytagname = mytagvalue`
+    var params = {
+      'Filter.1.Name': 'tag:mytagname',
+      'Filter.1.Value.1': 'mytagvalue'
+    }
 
-      ec2.call("DescribeInstances", params, function(err, result) {
-        console.log(JSON.stringify(result));
-        callback(null, result);
-      })
+    ec2.call("DescribeInstances", params, function(err, result) {
+      console.log(result);
+    })
 
 For more examples have a look at [/examples](https://github.com/livelycode/aws-lib/tree/master/examples) and [/test](https://github.com/livelycode/aws-lib/tree/master/test).
 
