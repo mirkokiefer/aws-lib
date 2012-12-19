@@ -31,7 +31,7 @@ The following snippet implements an ec2 client and makes a call to DescribeInsta
     ec2 = aws.createEC2Client(yourAccessKeyId, yourSecretAccessKey);
 
     ec2.call("DescribeInstances", {}, function(err, result) {
-      console.log(JSON.stringify(result));
+      console.log(result);
     })
 
 Which returns a JSON response similar to:
@@ -46,10 +46,10 @@ Which returns a JSON response similar to:
 
 Another example, using Product Advertising API:
 
-    prodAdv = aws.createProdAdvClient(yourAccessKeyId, yourSecretAccessKey, yourAssociateTag);
-
-    prodAdv.call("ItemSearch", {SearchIndex: "Books", Keywords: "Javascript"}, function(err, result) {
-      console.log(JSON.stringify(result));
+    var prodAdv = aws.createProdAdvClient(yourAccessKeyId, yourSecretAccessKey, yourAssociateTag);
+    var options = {SearchIndex: "Books", Keywords: "Javascript"}
+    prodAdv.call("ItemSearch", options, function(err, result) {
+      console.log(result);
     })
 
 Will return a long list of books.
@@ -63,16 +63,16 @@ which would instantiate the ec2 client, but using the 2010-08-31 API version.  S
 You can also specify additional parameters when making calls to the API. The example below shows how you can filter results using one of the list of filters documented in the AWS API docs.
 
     var options = {
-      'host': 'ec2.eu-west-1.amazonaws.com', // use a different region to the default
-      'version': '2010-08-31'
+      host: "ec2.eu-west-1.amazonaws.com", // use a different region to the default
+      version: "2010-08-31"
     };
 
     ec2 = aws.createEC2Client(yourAccessKeyId, yourSecretAccessKey, options);
     
     // create a filter for instances with `mytagname = mytagvalue`
     var params = {
-      'Filter.1.Name': 'tag:mytagname',
-      'Filter.1.Value.1': 'mytagvalue'
+      "Filter.1.Name": "tag:mytagname",
+      "Filter.1.Value.1": "mytagvalue"
     }
 
     ec2.call("DescribeInstances", params, function(err, result) {
@@ -95,7 +95,7 @@ If no access key or secret id are passed in to the client, aws-lib will attempt 
 
     var aws = require("aws-lib");
     var md = aws.createMetaDataClient();
-    md.call({endpoint: 'instance-id'}, function(err, res) {
+    md.call({endpoint: "instance-id"}, function(err, res) {
       console.log(res); // outputs this EC2's instance-id.
     });
 
