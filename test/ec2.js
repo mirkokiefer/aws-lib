@@ -14,4 +14,16 @@ describe('ec2', function() {
       })
     })
   })
+  describe('DescribeInstances', function() {
+	it('should return the reservationSet', function(done) {
+	  var params = {
+		  "Filter.1.Name": "instance-state-name",
+		  "Filter.1.Value.1": "running"
+	  };
+	  ec2.call("DescribeInstances", params, function(err, res) {
+		assert.ok(res.reservationSet);
+		done(err)
+		})
+	  })
+   })
 })
