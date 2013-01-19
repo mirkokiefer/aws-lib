@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/livelycode/aws-lib.png)](http://travis-ci.org/livelycode/aws-lib)
 Node.js library for the Amazon Web Services
 =====
 
