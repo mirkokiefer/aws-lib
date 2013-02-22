@@ -1,7 +1,7 @@
 {
   "name": "aws-lib",
   "description": "Extensible Node.js library for the Amazon Web Services API",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "http://github.com/livelycode/aws-lib",
   "keywords": ["amazon","aws", "ec2", "product advertising", "simpledb", "Simple Queue Service", "SQS", "Simple Email Service", "SES", "Auto Scaling", "AS"],
   "repository": "git://github.com/livelycode/aws-lib.git",
