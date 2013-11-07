@@ -1,9 +1,10 @@
-Node.js library for the Amazon Web Services
-=====
+#Node.js library for the Amazon Web Services
 
-A simple [Node.js](http://github.com/ry/node) library to communicate with the Amazon Web Services API.
+[![Build Status](https://travis-ci.org/livelycode/aws-lib.png?branch=master)](https://travis-ci.org/livelycode/aws-lib)
 
-This version of aws-lib has been tested on Node v0.6.11.
+[![NPM](https://nodei.co/npm/aws-lib.png)](https://nodei.co/npm/aws-lib/)
+
+A simple [Node.js](http://nodejs.org/) library to communicate with the Amazon Web Services API.
 
 It includes clients for the following services:
 
