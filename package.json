@@ -22,7 +22,8 @@
     "nock": "0.14.x"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha -t 60000"
+    "test": "./node_modules/.bin/mocha -t 60000",
+    "test-on-aws": "ON_AWS=1 ./node_modules/.bin/mocha -t 60000"
   },
   "main": "lib/aws",
   "directories": {
