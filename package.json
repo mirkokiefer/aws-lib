@@ -3,7 +3,19 @@
   "description": "Extensible Node.js library for the Amazon Web Services API",
   "version": "0.2.1",
   "homepage": "http://github.com/livelycode/aws-lib",
-  "keywords": ["amazon","aws", "ec2", "product advertising", "simpledb", "Simple Queue Service", "SQS", "Simple Email Service", "SES", "Auto Scaling", "AS"],
+  "keywords": [
+    "amazon",
+    "aws",
+    "ec2",
+    "product advertising",
+    "simpledb",
+    "Simple Queue Service",
+    "SQS",
+    "Simple Email Service",
+    "SES",
+    "Auto Scaling",
+    "AS"
+  ],
   "repository": "git://github.com/livelycode/aws-lib.git",
   "author": "Mirko Kiefer <mail@mirkokiefer.com> (http://mirkokiefer.com)",
   "contributors": [
@@ -14,8 +26,9 @@
     "Mike MacCana <mike.maccana@gmail.com> (http://mikemaccana.com/)"
   ],
   "dependencies": {
-      "xml2js": "0.1.x",
-      "sax": "0.1.x"
+    "xml2js": "0.1.x",
+    "sax": "0.1.x",
+    "underscore": "~1.5.2"
   },
   "devDependencies": {
     "mocha": "*",
