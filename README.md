@@ -122,8 +122,9 @@ credentials.js is part of .gitignore so you don't have to worry about accidentia
 
 To run the tests execute:
 
-    npm test
-
+```
+npm test
+```
 
 ## Contributing
 *At livelycode we currently can't invest enough time to merge and test all new contributions. So our friends at [mapbox](https://github.com/mapbox) offered to jump in and help maintain this library. We have granted [Ian Ward](https://github.com/ianshward) commit access to this repository.*
