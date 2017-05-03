@@ -1,6 +1,6 @@
 # Node.js library for the Amazon Web Services
 
-[![Build Status](https://travis-ci.org/livelycode/aws-lib.png?branch=master)](https://travis-ci.org/livelycode/aws-lib)
+[![Build Status](https://travis-ci.org/mirkokiefer/aws-lib.png?branch=master)](https://travis-ci.org/mirkokiefer/aws-lib)
 
 [![NPM](https://nodei.co/npm/aws-lib.png)](https://nodei.co/npm/aws-lib/)
 
@@ -8,19 +8,19 @@ A simple [Node.js](http://nodejs.org/) library to communicate with the Amazon We
 
 It includes clients for the following services:
 
-   * [EC2](https://github.com/livelycode/aws-lib/blob/master/examples/ec2.js)
-   * [Product Advertising API](https://github.com/livelycode/aws-lib/blob/master/examples/prod-adv.js)
-   * [SimpleDB](https://github.com/livelycode/aws-lib/blob/master/test/simpledb.js)
-   * [SQS (Simple Queue Service)](https://github.com/livelycode/aws-lib/blob/master/examples/sqs.js)
+   * [EC2](https://github.com/mirkokiefer/aws-lib/blob/master/examples/ec2.js)
+   * [Product Advertising API](https://github.com/mirkokiefer/aws-lib/blob/master/examples/prod-adv.js)
+   * [SimpleDB](https://github.com/mirkokiefer/aws-lib/blob/master/test/simpledb.js)
+   * [SQS (Simple Queue Service)](https://github.com/mirkokiefer/aws-lib/blob/master/examples/sqs.js)
    * SNS (Simple Notification Service)
-   * [SES (Simple Email Service)](https://github.com/livelycode/aws-lib/blob/master/examples/ses.js)
-   * [ELB (Elastic Load Balancing Service)](https://github.com/livelycode/aws-lib/blob/master/examples/elb.js)
-   * [CW (CloudWatch)](https://github.com/livelycode/aws-lib/blob/master/examples/cw.js)
-   * [IAM (Identity and Access Management)](https://github.com/livelycode/aws-lib/blob/master/examples/iam.js)
-   * [CFN (CloudFormation)](https://github.com/livelycode/aws-lib/blob/master/test/cfn.js)
+   * [SES (Simple Email Service)](https://github.com/mirkokiefer/aws-lib/blob/master/examples/ses.js)
+   * [ELB (Elastic Load Balancing Service)](https://github.com/mirkokiefer/aws-lib/blob/master/examples/elb.js)
+   * [CW (CloudWatch)](https://github.com/mirkokiefer/aws-lib/blob/master/examples/cw.js)
+   * [IAM (Identity and Access Management)](https://github.com/mirkokiefer/aws-lib/blob/master/examples/iam.js)
+   * [CFN (CloudFormation)](https://github.com/mirkokiefer/aws-lib/blob/master/test/cfn.js)
    * STS (Security Token Service)
-   * [Elastic MapReduce](https://github.com/livelycode/aws-lib/blob/master/test/emr.js)
-   * [AS (Auto Scaling)](https://github.com/livelycode/aws-lib/blob/master/test/as.js)
+   * [Elastic MapReduce](https://github.com/mirkokiefer/aws-lib/blob/master/test/emr.js)
+   * [AS (Auto Scaling)](https://github.com/mirkokiefer/aws-lib/blob/master/test/as.js)
 
 Richard Rodger maintains a user-friendly [SimpleDB library](http://github.com/rjrodger/simpledb) which is based on aws-lib.
 
@@ -93,7 +93,7 @@ ec2.call("DescribeInstances", params, function(err, result) {
 })
 ```
 
-For more examples have a look at [/examples](https://github.com/livelycode/aws-lib/tree/master/examples) and [/test](https://github.com/livelycode/aws-lib/tree/master/test).
+For more examples have a look at [/examples](https://github.com/mirkokiefer/aws-lib/tree/master/examples) and [/test](https://github.com/mirkokiefer/aws-lib/tree/master/test).
 
 ## Credentials, metadata API, and IAM Roles
 
@@ -128,10 +128,8 @@ npm test
 ```
 
 ## Contributing
-*At livelycode we currently can't invest enough time to merge and test all new contributions. So our friends at [mapbox](https://github.com/mapbox) offered to jump in and help maintain this library. We have granted [Ian Ward](https://github.com/ianshward) commit access to this repository.*
-
 aws-lib is designed to be easily extensible.  
-If you want to add support for a service, have a look at an [existing client](https://github.com/livelycode/aws-lib/blob/master/lib/ec2.js) and simply follow the pattern.  
+If you want to add support for a service, have a look at an [existing client](https://github.com/mirkokiefer/aws-lib/blob/master/lib/ec2.js) and simply follow the pattern.  
 When submitting a pull request please add a test for at least one API call.
 
 Many thanks to the following people who have contributed so far (ordered by number of commits):
