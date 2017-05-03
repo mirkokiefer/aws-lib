@@ -1,4 +1,4 @@
-#Node.js library for the Amazon Web Services
+# Node.js library for the Amazon Web Services
 
 [![Build Status](https://travis-ci.org/livelycode/aws-lib.png?branch=master)](https://travis-ci.org/livelycode/aws-lib)
 
